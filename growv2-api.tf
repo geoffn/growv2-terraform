@@ -5,7 +5,7 @@ provider "aws" {
 
 resource "aws_key_pair" "example" {
   key_name   = "examplekey"
-  public_key = file("./terraform.pub")
+  public_key = file("../terraform.pub")
 }
 
 resource "aws_instance" "Terraform1" {
@@ -21,7 +21,7 @@ resource "aws_instance" "Terraform1" {
   connection {
     type        = "ssh"
     user        = "alpine"
-    private_key = file("./terraform")
+    private_key = file("../terraform")
     host        = self.public_ip
   }
 
@@ -42,7 +42,10 @@ resource "aws_instance" "Terraform1" {
       "cd growv2api-master",
       "npm install",
       "sudo npm install forever -g",
-      "forever start index.js"
+      "forever start index.js",
+      "sudo apk add wget",
+      "sleep 2",
+      "wget -q -O wget.out --header=\"Content-Type:application/json\" --post-file=./testing/createfoodbank.json http://localhost:3001/foodbankbulk >> out.txt"
 
     ]
   }
