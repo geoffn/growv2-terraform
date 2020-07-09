@@ -50,3 +50,8 @@ resource "aws_instance" "Terraform1" {
     ]
   }
 }
+resource "aws_lb_target_group_attachment" "growapiv1" {
+  target_group_arn = "arn:aws:elasticloadbalancing:us-east-1:435852888074:targetgroup/growapiv1/ee5a89d4dd871e47"
+  target_id        = "${aws_instance.Terraform1.id}"
+  port             = 3001
+}
