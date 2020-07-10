@@ -40,3 +40,8 @@ resource "aws_instance" "frontend" {
   }
 }
 
+resource "aws_lb_target_group_attachment" "growFrontEnd" {
+  target_group_arn = "arn:aws:elasticloadbalancing:us-east-1:435852888074:targetgroup/growFrontEnd/7d753250c2ea7ced"
+  target_id        = "${aws_instance.frontend.id}"
+  port             = 3000
+}
