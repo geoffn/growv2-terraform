@@ -49,34 +49,7 @@ resource "aws_lb_listener" "growapi-test80" {
   }
 }
 
-#   listener {
-#     instance_port     = 8000
-#     instance_protocol = "http"
-#     lb_port           = 80
-#     lb_protocol       = "http"
-#   }
 
-#   listener {
-#     instance_port      = 3001
-#     instance_protocol  = "http"
-#     lb_port            = 443
-#     lb_protocol        = "https"
-#     ssl_certificate_id = "arn:aws:acm:us-east-1:435852888074:certificate/ced2cb80-eca7-4aec-b674-4c3ddf83ec56"
-#   }
-
-#   health_check {
-#     healthy_threshold   = 2
-#     unhealthy_threshold = 2
-#     timeout             = 3
-#     target              = "HTTP:3001/"
-#     interval            = 30
-#   }
-
-#   instances                   = [aws_instance.foo.id]
-#   cross_zone_load_balancing   = true
-#   idle_timeout                = 400
-#   connection_draining         = true
-#   connection_draining_timeout = 400
 
 
 
