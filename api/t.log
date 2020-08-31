@@ -1,0 +1,478 @@
+Interrupt received.
+Please wait for Terraform to exit or data loss may occur.
+Gracefully shutting down...
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[1m  # aws_instance.growapinode1[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_instance" "growapinode1" {
+      [32m+[0m [0m[1m[0mami[0m[0m                          = "ami-002a48030440e00da"
+      [32m+[0m [0m[1m[0marn[0m[0m                          = (known after apply)
+      [32m+[0m [0m[1m[0massociate_public_ip_address[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mavailability_zone[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mcpu_core_count[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mcpu_threads_per_core[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mget_password_data[0m[0m            = false
+      [32m+[0m [0m[1m[0mhost_id[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                           = (known after apply)
+      [32m+[0m [0m[1m[0minstance_state[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0minstance_type[0m[0m                = "t2.micro"
+      [32m+[0m [0m[1m[0mipv6_address_count[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_addresses[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mkey_name[0m[0m                     = "growapikp"
+      [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0moutpost_arn[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mpassword_data[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mplacement_group[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mprimary_network_interface_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_dns[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_dns[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_ip[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0msecurity_groups[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0msource_dest_check[0m[0m            = true
+      [32m+[0m [0m[1m[0msubnet_id[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                         = {
+          [32m+[0m [0m"Name" = "APIGrowV1Terraform"
+        }
+      [32m+[0m [0m[1m[0mtenancy[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0mvolume_tags[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mvpc_security_group_ids[0m[0m       = [
+          [32m+[0m [0m"sg-0822ddbc3a0fec3da",
+        ]
+
+      [32m+[0m [0mebs_block_device {
+          [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mdevice_name[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mencrypted[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0miops[0m[0m                  = (known after apply)
+          [32m+[0m [0m[1m[0mkms_key_id[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0msnapshot_id[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_id[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_size[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_type[0m[0m           = (known after apply)
+        }
+
+      [32m+[0m [0mephemeral_block_device {
+          [32m+[0m [0m[1m[0mdevice_name[0m[0m  = (known after apply)
+          [32m+[0m [0m[1m[0mno_device[0m[0m    = (known after apply)
+          [32m+[0m [0m[1m[0mvirtual_name[0m[0m = (known after apply)
+        }
+
+      [32m+[0m [0mmetadata_options {
+          [32m+[0m [0m[1m[0mhttp_endpoint[0m[0m               = (known after apply)
+          [32m+[0m [0m[1m[0mhttp_put_response_hop_limit[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mhttp_tokens[0m[0m                 = (known after apply)
+        }
+
+      [32m+[0m [0mnetwork_interface {
+          [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mdevice_index[0m[0m          = (known after apply)
+          [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m  = (known after apply)
+        }
+
+      [32m+[0m [0mroot_block_device {
+          [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mdevice_name[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mencrypted[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0miops[0m[0m                  = (known after apply)
+          [32m+[0m [0m[1m[0mkms_key_id[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_id[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_size[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_type[0m[0m           = (known after apply)
+        }
+    }
+
+[1m  # aws_key_pair.growapikp[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_key_pair" "growapikp" {
+      [32m+[0m [0m[1m[0marn[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mfingerprint[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mkey_name[0m[0m    = "growapikp"
+      [32m+[0m [0m[1m[0mkey_pair_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key[0m[0m  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDGFEwpYWUOjOYiqAGS/Ih6SKNSedr0lnvf0FZnK3osk8a5PZfoc35KChN5RMD1YuYcit4gqM+c3XhCEYLjXy/UGcFRaGX+pZnMpIxtJeeaxBBhBy7gic8XYND8ffc+AlMzvavafSzMDxOwiy513ffwiy657F7ebWgcftikQiEN4rdUZ+nHfKfxABJckX499cS6ZJZXF6wqlEb5/lUOHgSDNpMwjBI9aoLJC2cRO4COa2H0fbaBoBavTbupEDFzMySYctsGcR8ASqU/oWXvCBnyTFzrCAgweeSl7njwvLzCqftmvtAKN7snl2h9y1c2Z2Fms+J/9vN9fHUiUcg/whA6Cf90tJTxvEDUPIZxcacYvmi0VbAeLHjl/YMVgwSg0p2AdMNN6lRt6L2Kx548RqeNVqEL6n96xKtxndcwkILIDbFygdqwOKzYTwHgJwhKdbENX36ySEtetkh6RUD7KEFxwgpaPykzbCOtO6xwjYxy1HrFs4+Hdta+ywyz1ATSJjM= geoffnelson@Geoffs-Air.hsd1.wa.comcast.net"
+    }
+
+[1m  # aws_lb.growapi-test[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_lb" "growapi-test" {
+      [32m+[0m [0m[1m[0marn[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0marn_suffix[0m[0m                 = (known after apply)
+      [32m+[0m [0m[1m[0mdns_name[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mdrop_invalid_header_fields[0m[0m = false
+      [32m+[0m [0m[1m[0menable_deletion_protection[0m[0m = false
+      [32m+[0m [0m[1m[0menable_http2[0m[0m               = true
+      [32m+[0m [0m[1m[0mid[0m[0m                         = (known after apply)
+      [32m+[0m [0m[1m[0midle_timeout[0m[0m               = 60
+      [32m+[0m [0m[1m[0minternal[0m[0m                   = false
+      [32m+[0m [0m[1m[0mip_address_type[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mload_balancer_type[0m[0m         = "application"
+      [32m+[0m [0m[1m[0mname[0m[0m                       = "growapi-test"
+      [32m+[0m [0m[1m[0msecurity_groups[0m[0m            = [
+          [32m+[0m [0m"sg-0822ddbc3a0fec3da",
+        ]
+      [32m+[0m [0m[1m[0msubnets[0m[0m                    = [
+          [32m+[0m [0m"subnet-030cfa65",
+          [32m+[0m [0m"subnet-6e303550",
+          [32m+[0m [0m"subnet-74ea182b",
+          [32m+[0m [0m"subnet-b5ab00bb",
+          [32m+[0m [0m"subnet-d2e915f3",
+          [32m+[0m [0m"subnet-eb9011a6",
+        ]
+      [32m+[0m [0m[1m[0mvpc_id[0m[0m                     = (known after apply)
+      [32m+[0m [0m[1m[0mzone_id[0m[0m                    = (known after apply)
+
+      [32m+[0m [0msubnet_mapping {
+          [32m+[0m [0m[1m[0mallocation_id[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0msubnet_id[0m[0m     = (known after apply)
+        }
+    }
+
+[1m  # aws_lb_listener.growapi-test[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_lb_listener" "growapi-test" {
+      [32m+[0m [0m[1m[0marn[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mcertificate_arn[0m[0m   = "arn:aws:acm:us-east-1:435852888074:certificate/ced2cb80-eca7-4aec-b674-4c3ddf83ec56"
+      [32m+[0m [0m[1m[0mid[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mload_balancer_arn[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mport[0m[0m              = 443
+      [32m+[0m [0m[1m[0mprotocol[0m[0m          = "HTTPS"
+      [32m+[0m [0m[1m[0mssl_policy[0m[0m        = "ELBSecurityPolicy-2016-08"
+
+      [32m+[0m [0mdefault_action {
+          [32m+[0m [0m[1m[0morder[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mtarget_group_arn[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mtype[0m[0m             = "forward"
+        }
+    }
+
+[1m  # aws_lb_listener.growapi-test80[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_lb_listener" "growapi-test80" {
+      [32m+[0m [0m[1m[0marn[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mload_balancer_arn[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mport[0m[0m              = 80
+      [32m+[0m [0m[1m[0mprotocol[0m[0m          = "HTTP"
+      [32m+[0m [0m[1m[0mssl_policy[0m[0m        = (known after apply)
+
+      [32m+[0m [0mdefault_action {
+          [32m+[0m [0m[1m[0morder[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mtype[0m[0m  = "redirect"
+
+          [32m+[0m [0mredirect {
+              [32m+[0m [0m[1m[0mhost[0m[0m        = "#{host}"
+              [32m+[0m [0m[1m[0mpath[0m[0m        = "/#{path}"
+              [32m+[0m [0m[1m[0mport[0m[0m        = "443"
+              [32m+[0m [0m[1m[0mprotocol[0m[0m    = "HTTPS"
+              [32m+[0m [0m[1m[0mquery[0m[0m       = "#{query}"
+              [32m+[0m [0m[1m[0mstatus_code[0m[0m = "HTTP_301"
+            }
+        }
+    }
+
+[1m  # aws_lb_target_group.growapi-testgroup[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_lb_target_group" "growapi-testgroup" {
+      [32m+[0m [0m[1m[0marn[0m[0m                                = (known after apply)
+      [32m+[0m [0m[1m[0marn_suffix[0m[0m                         = (known after apply)
+      [32m+[0m [0m[1m[0mderegistration_delay[0m[0m               = 300
+      [32m+[0m [0m[1m[0mid[0m[0m                                 = (known after apply)
+      [32m+[0m [0m[1m[0mlambda_multi_value_headers_enabled[0m[0m = false
+      [32m+[0m [0m[1m[0mload_balancing_algorithm_type[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                               = "growapi-testgroup"
+      [32m+[0m [0m[1m[0mport[0m[0m                               = 3001
+      [32m+[0m [0m[1m[0mprotocol[0m[0m                           = "HTTP"
+      [32m+[0m [0m[1m[0mproxy_protocol_v2[0m[0m                  = false
+      [32m+[0m [0m[1m[0mslow_start[0m[0m                         = 0
+      [32m+[0m [0m[1m[0mtarget_type[0m[0m                        = "instance"
+      [32m+[0m [0m[1m[0mvpc_id[0m[0m                             = "vpc-c8e2e0b2"
+
+      [32m+[0m [0mhealth_check {
+          [32m+[0m [0m[1m[0menabled[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0mhealthy_threshold[0m[0m   = (known after apply)
+          [32m+[0m [0m[1m[0minterval[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mmatcher[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0mpath[0m[0m                = (known after apply)
+          [32m+[0m [0m[1m[0mport[0m[0m                = (known after apply)
+          [32m+[0m [0m[1m[0mprotocol[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mtimeout[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0munhealthy_threshold[0m[0m = (known after apply)
+        }
+
+      [32m+[0m [0mstickiness {
+          [32m+[0m [0m[1m[0mcookie_duration[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0menabled[0m[0m         = (known after apply)
+          [32m+[0m [0m[1m[0mtype[0m[0m            = (known after apply)
+        }
+    }
+
+[1m  # aws_lb_target_group_attachment.growapi-testgroup[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_lb_target_group_attachment" "growapi-testgroup" {
+      [32m+[0m [0m[1m[0mid[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mport[0m[0m             = 3001
+      [32m+[0m [0m[1m[0mtarget_group_arn[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mtarget_id[0m[0m        = (known after apply)
+    }
+
+[0m[1mPlan:[0m 7 to add, 0 to change, 0 to destroy.[0m
+
+[33m
+[1m[33mWarning: [0m[0m[1mInterpolation-only expressions are deprecated[0m
+
+[0m  on growv2-api.tf line 99, in resource "aws_lb_target_group_attachment" "growapi-testgroup":
+  99:   target_id        = [4m"${aws_instance.growapinode1.id}"[0m
+[0m
+Terraform 0.11 and earlier required all non-constant expressions to be
+provided via interpolation syntax, but this pattern is now deprecated. To
+silence this warning, remove the "${ sequence from the start and the }"
+sequence from the end of this expression, leaving just the inner expression.
+
+Template interpolation syntax is still used to construct strings from
+expressions when the template includes multiple interpolation sequences or a
+mixture of literal strings and interpolations. This deprecation applies only
+to templates that consist entirely of a single interpolation sequence.
+[0m[0m
+[0m[1mDo you want to perform these actions?[0m
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  [1mEnter a value:[0m [0m
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[1m  # aws_instance.growapinode1[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_instance" "growapinode1" {
+      [32m+[0m [0m[1m[0mami[0m[0m                          = "ami-002a48030440e00da"
+      [32m+[0m [0m[1m[0marn[0m[0m                          = (known after apply)
+      [32m+[0m [0m[1m[0massociate_public_ip_address[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mavailability_zone[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mcpu_core_count[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mcpu_threads_per_core[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mget_password_data[0m[0m            = false
+      [32m+[0m [0m[1m[0mhost_id[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                           = (known after apply)
+      [32m+[0m [0m[1m[0minstance_state[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0minstance_type[0m[0m                = "t2.micro"
+      [32m+[0m [0m[1m[0mipv6_address_count[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_addresses[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mkey_name[0m[0m                     = "growapikp"
+      [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0moutpost_arn[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mpassword_data[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mplacement_group[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mprimary_network_interface_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_dns[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_dns[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_ip[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0msecurity_groups[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0msource_dest_check[0m[0m            = true
+      [32m+[0m [0m[1m[0msubnet_id[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                         = {
+          [32m+[0m [0m"Name" = "APIGrowV1Terraform"
+        }
+      [32m+[0m [0m[1m[0mtenancy[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0mvolume_tags[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mvpc_security_group_ids[0m[0m       = [
+          [32m+[0m [0m"sg-0822ddbc3a0fec3da",
+        ]
+
+      [32m+[0m [0mebs_block_device {
+          [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mdevice_name[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mencrypted[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0miops[0m[0m                  = (known after apply)
+          [32m+[0m [0m[1m[0mkms_key_id[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0msnapshot_id[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_id[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_size[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_type[0m[0m           = (known after apply)
+        }
+
+      [32m+[0m [0mephemeral_block_device {
+          [32m+[0m [0m[1m[0mdevice_name[0m[0m  = (known after apply)
+          [32m+[0m [0m[1m[0mno_device[0m[0m    = (known after apply)
+          [32m+[0m [0m[1m[0mvirtual_name[0m[0m = (known after apply)
+        }
+
+      [32m+[0m [0mmetadata_options {
+          [32m+[0m [0m[1m[0mhttp_endpoint[0m[0m               = (known after apply)
+          [32m+[0m [0m[1m[0mhttp_put_response_hop_limit[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mhttp_tokens[0m[0m                 = (known after apply)
+        }
+
+      [32m+[0m [0mnetwork_interface {
+          [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mdevice_index[0m[0m          = (known after apply)
+          [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m  = (known after apply)
+        }
+
+      [32m+[0m [0mroot_block_device {
+          [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mdevice_name[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mencrypted[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0miops[0m[0m                  = (known after apply)
+          [32m+[0m [0m[1m[0mkms_key_id[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_id[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_size[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_type[0m[0m           = (known after apply)
+        }
+    }
+
+[1m  # aws_key_pair.growapikp[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_key_pair" "growapikp" {
+      [32m+[0m [0m[1m[0marn[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mfingerprint[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mkey_name[0m[0m    = "growapikp"
+      [32m+[0m [0m[1m[0mkey_pair_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key[0m[0m  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDGFEwpYWUOjOYiqAGS/Ih6SKNSedr0lnvf0FZnK3osk8a5PZfoc35KChN5RMD1YuYcit4gqM+c3XhCEYLjXy/UGcFRaGX+pZnMpIxtJeeaxBBhBy7gic8XYND8ffc+AlMzvavafSzMDxOwiy513ffwiy657F7ebWgcftikQiEN4rdUZ+nHfKfxABJckX499cS6ZJZXF6wqlEb5/lUOHgSDNpMwjBI9aoLJC2cRO4COa2H0fbaBoBavTbupEDFzMySYctsGcR8ASqU/oWXvCBnyTFzrCAgweeSl7njwvLzCqftmvtAKN7snl2h9y1c2Z2Fms+J/9vN9fHUiUcg/whA6Cf90tJTxvEDUPIZxcacYvmi0VbAeLHjl/YMVgwSg0p2AdMNN6lRt6L2Kx548RqeNVqEL6n96xKtxndcwkILIDbFygdqwOKzYTwHgJwhKdbENX36ySEtetkh6RUD7KEFxwgpaPykzbCOtO6xwjYxy1HrFs4+Hdta+ywyz1ATSJjM= geoffnelson@Geoffs-Air.hsd1.wa.comcast.net"
+    }
+
+[1m  # aws_lb.growapi-test[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_lb" "growapi-test" {
+      [32m+[0m [0m[1m[0marn[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0marn_suffix[0m[0m                 = (known after apply)
+      [32m+[0m [0m[1m[0mdns_name[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mdrop_invalid_header_fields[0m[0m = false
+      [32m+[0m [0m[1m[0menable_deletion_protection[0m[0m = false
+      [32m+[0m [0m[1m[0menable_http2[0m[0m               = true
+      [32m+[0m [0m[1m[0mid[0m[0m                         = (known after apply)
+      [32m+[0m [0m[1m[0midle_timeout[0m[0m               = 60
+      [32m+[0m [0m[1m[0minternal[0m[0m                   = false
+      [32m+[0m [0m[1m[0mip_address_type[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mload_balancer_type[0m[0m         = "application"
+      [32m+[0m [0m[1m[0mname[0m[0m                       = "growapi-test"
+      [32m+[0m [0m[1m[0msecurity_groups[0m[0m            = [
+          [32m+[0m [0m"sg-0822ddbc3a0fec3da",
+        ]
+      [32m+[0m [0m[1m[0msubnets[0m[0m                    = [
+          [32m+[0m [0m"subnet-030cfa65",
+          [32m+[0m [0m"subnet-6e303550",
+          [32m+[0m [0m"subnet-74ea182b",
+          [32m+[0m [0m"subnet-b5ab00bb",
+          [32m+[0m [0m"subnet-d2e915f3",
+          [32m+[0m [0m"subnet-eb9011a6",
+        ]
+      [32m+[0m [0m[1m[0mvpc_id[0m[0m                     = (known after apply)
+      [32m+[0m [0m[1m[0mzone_id[0m[0m                    = (known after apply)
+
+      [32m+[0m [0msubnet_mapping {
+          [32m+[0m [0m[1m[0mallocation_id[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0msubnet_id[0m[0m     = (known after apply)
+        }
+    }
+
+[1m  # aws_lb_listener.growapi-test[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_lb_listener" "growapi-test" {
+      [32m+[0m [0m[1m[0marn[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mcertificate_arn[0m[0m   = "arn:aws:acm:us-east-1:435852888074:certificate/ced2cb80-eca7-4aec-b674-4c3ddf83ec56"
+      [32m+[0m [0m[1m[0mid[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mload_balancer_arn[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mport[0m[0m              = 443
+      [32m+[0m [0m[1m[0mprotocol[0m[0m          = "HTTPS"
+      [32m+[0m [0m[1m[0mssl_policy[0m[0m        = "ELBSecurityPolicy-2016-08"
+
+      [32m+[0m [0mdefault_action {
+          [32m+[0m [0m[1m[0morder[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mtarget_group_arn[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mtype[0m[0m             = "forward"
+        }
+    }
+
+[1m  # aws_lb_listener.growapi-test80[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_lb_listener" "growapi-test80" {
+      [32m+[0m [0m[1m[0marn[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mload_balancer_arn[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mport[0m[0m              = 80
+      [32m+[0m [0m[1m[0mprotocol[0m[0m          = "HTTP"
+      [32m+[0m [0m[1m[0mssl_policy[0m[0m        = (known after apply)
+
+      [32m+[0m [0mdefault_action {
+          [32m+[0m [0m[1m[0morder[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mtype[0m[0m  = "redirect"
+
+          [32m+[0m [0mredirect {
+              [32m+[0m [0m[1m[0mhost[0m[0m        = "#{host}"
+              [32m+[0m [0m[1m[0mpath[0m[0m        = "/#{path}"
+              [32m+[0m [0m[1m[0mport[0m[0m        = "443"
+              [32m+[0m [0m[1m[0mprotocol[0m[0m    = "HTTPS"
+              [32m+[0m [0m[1m[0mquery[0m[0m       = "#{query}"
+              [32m+[0m [0m[1m[0mstatus_code[0m[0m = "HTTP_301"
+            }
+        }
+    }
+
+[1m  # aws_lb_target_group.growapi-testgroup[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_lb_target_group" "growapi-testgroup" {
+      [32m+[0m [0m[1m[0marn[0m[0m                                = (known after apply)
+      [32m+[0m [0m[1m[0marn_suffix[0m[0m                         = (known after apply)
+      [32m+[0m [0m[1m[0mderegistration_delay[0m[0m               = 300
+      [32m+[0m [0m[1m[0mid[0m[0m                                 = (known after apply)
+      [32m+[0m [0m[1m[0mlambda_multi_value_headers_enabled[0m[0m = false
+      [32m+[0m [0m[1m[0mload_balancing_algorithm_type[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                               = "growapi-testgroup"
+      [32m+[0m [0m[1m[0mport[0m[0m                               = 3001
+      [32m+[0m [0m[1m[0mprotocol[0m[0m                           = "HTTP"
+      [32m+[0m [0m[1m[0mproxy_protocol_v2[0m[0m                  = false
+      [32m+[0m [0m[1m[0mslow_start[0m[0m                         = 0
+      [32m+[0m [0m[1m[0mtarget_type[0m[0m                        = "instance"
+      [32m+[0m [0m[1m[0mvpc_id[0m[0m                             = "vpc-c8e2e0b2"
+
+      [32m+[0m [0mhealth_check {
+          [32m+[0m [0m[1m[0menabled[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0mhealthy_threshold[0m[0m   = (known after apply)
+          [32m+[0m [0m[1m[0minterval[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mmatcher[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0mpath[0m[0m                = (known after apply)
+          [32m+[0m [0m[1m[0mport[0m[0m                = (known after apply)
+          [32m+[0m [0m[1m[0mprotocol[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mtimeout[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0munhealthy_threshold[0m[0m = (known after apply)
+        }
+
+      [32m+[0m [0mstickiness {
+          [32m+[0m [0m[1m[0mcookie_duration[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0menabled[0m[0m         = (known after apply)
+          [32m+[0m [0m[1m[0mtype[0m[0m            = (known after apply)
+        }
+    }
+
+[1m  # aws_lb_target_group_attachment.growapi-testgroup[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_lb_target_group_attachment" "growapi-testgroup" {
+      [32m+[0m [0m[1m[0mid[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mport[0m[0m             = 3001
+      [32m+[0m [0m[1m[0mtarget_group_arn[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mtarget_id[0m[0m        = (known after apply)
+    }
+
+[0m[1mPlan:[0m 7 to add, 0 to change, 0 to destroy.[0m
+
+[33m
+[1m[33mWarning: [0m[0m[1mInterpolation-only expressions are deprecated[0m
+
+[0m  on growv2-api.tf line 99, in resource "aws_lb_target_group_attachment" "growapi-testgroup":
+  99:   target_id        = [4m"${aws_instance.growapinode1.id}"[0m
+[0m
+Terraform 0.11 and earlier required all non-constant expressions to be
+provided via interpolation syntax, but this pattern is now deprecated. To
+silence this warning, remove the "${ sequence from the start and the }"
+sequence from the end of this expression, leaving just the inner expression.
+
+Template interpolation syntax is still used to construct strings from
+expressions when the template includes multiple interpolation sequences or a
+mixture of literal strings and interpolations. This deprecation applies only
+to templates that consist entirely of a single interpolation sequence.
+[0m[0m
+[0m[1mDo you want to perform these actions?[0m
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  [1mEnter a value:[0m [0m
+Apply cancelled.
